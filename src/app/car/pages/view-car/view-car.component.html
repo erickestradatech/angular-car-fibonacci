@@ -1,0 +1,24 @@
+<div class="row my-3">
+  <h2 class="my-5 tex-center">
+    ¡Bienvenidos!😀 - Lista de modelos de carros🚙
+  </h2>
+
+  <div
+    *ngFor="let car of cars"
+    class="col-md-4 col-sm-6 animate__animated animate__fadeIn animate__fast"
+  >
+    <div class="card">
+      <img [src]="car.image" />
+      <div class="card-body">
+        <h5 class="card-title">
+          {{ car.name }}
+        </h5>
+        <hr />
+
+        <h6>Precio: {{ car.price | currency }}</h6>
+
+        <p>{{ car.detail }}</p>
+      </div>
+    </div>
+  </div>
+</div>

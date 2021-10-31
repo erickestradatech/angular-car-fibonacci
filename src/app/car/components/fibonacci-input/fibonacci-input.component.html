@@ -1,0 +1,16 @@
+<form class="my-4" (ngSubmit)="calculate()">
+  <input
+    type="text"
+    name="number"
+    class="form-control"
+    [(ngModel)]="number"
+    placeholder="Ingrese un número: "
+    id="number"
+  />
+</form>
+
+<h2 class="my-5">Serie de Fibonacci😄</h2>
+
+<ul *ngFor="let number of result" class="list-group my-3">
+  <li class="list-group-item list-group-item-success">{{ number }}</li>
+</ul>
